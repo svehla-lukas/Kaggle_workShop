@@ -1,0 +1,15 @@
+# Složky a soubory generované Pythonem
+__pycache__/
+*.py[cod]
+
+# Virtuální prostředí
+venv/
+env/
+
+# Logy a dočasné soubory
+*.log
+*.tmp
+
+# Nastavení IDE (např. pro VS Code, PyCharm)
+.vscode/
+.idea/
