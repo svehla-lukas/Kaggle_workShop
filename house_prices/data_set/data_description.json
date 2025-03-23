@@ -1,0 +1,1644 @@
+{
+  "MSSubClass": {
+    "description": "Identifies the type of dwelling involved in the sale.",
+    "20": {
+      "id": 0,
+      "items": {
+        "description": "1-STORY 1946 & NEWER ALL STYLES"
+      },
+      "30": {
+        "id": 1,
+        "description": "1-STORY 1945 & OLDER"
+      },
+      "40": {
+        "id": 2,
+        "description": "1-STORY W/FINISHED ATTIC ALL AGES"
+      },
+      "45": {
+        "id": 3,
+        "description": "1-1/2 STORY - UNFINISHED ALL AGES"
+      },
+      "50": {
+        "id": 4,
+        "description": "1-1/2 STORY FINISHED ALL AGES"
+      },
+      "60": {
+        "id": 5,
+        "description": "2-STORY 1946 & NEWER"
+      },
+      "70": {
+        "id": 6,
+        "description": "2-STORY 1945 & OLDER"
+      },
+      "75": {
+        "id": 7,
+        "description": "2-1/2 STORY ALL AGES"
+      },
+      "80": {
+        "id": 8,
+        "description": "SPLIT OR MULTI-LEVEL"
+      },
+      "85": {
+        "id": 9,
+        "description": "SPLIT FOYER"
+      },
+      "90": {
+        "id": 10,
+        "description": "DUPLEX - ALL STYLES AND AGES"
+      },
+      "120": {
+        "id": 11,
+        "description": "1-STORY PUD (Planned Unit Development) - 1946 & NEWER"
+      },
+      "150": {
+        "id": 12,
+        "description": "1-1/2 STORY PUD - ALL AGES"
+      },
+      "160": {
+        "id": 13,
+        "description": "2-STORY PUD - 1946 & NEWER"
+      },
+      "180": {
+        "id": 14,
+        "description": "PUD - MULTILEVEL - INCL SPLIT LEV/FOYER"
+      },
+      "190": {
+        "id": 15,
+        "description": "2 FAMILY CONVERSION - ALL STYLES AND AGES"
+      }
+    }
+  },
+  "MSZoning": {
+    "description": "Identifies the general zoning classification of the sale.",
+    "items": {
+      "A": {
+        "id": 0,
+        "description": "Agriculture"
+      },
+      "C (all)": {
+        "id": 1,
+        "description": "Commercial"
+      },
+      "FV": {
+        "id": 2,
+        "description": "Floating Village Residential"
+      },
+      "I": {
+        "id": 3,
+        "description": "Industrial"
+      },
+      "RH": {
+        "id": 4,
+        "description": "Residential High Density"
+      },
+      "RL": {
+        "id": 5,
+        "description": "Residential Low Density"
+      },
+      "RP": {
+        "id": 6,
+        "description": "Residential Low Density Park"
+      },
+      "RM": {
+        "id": 7,
+        "description": "Residential Medium Density"
+      }
+    }
+  },
+  "LotFrontage": {
+    "description": "Linear feet of street connected to property",
+    "items": null
+  },
+  "LotArea": {
+    "description": "Lot size in square feet",
+    "items": null
+  },
+  "Street": {
+    "description": "Type of road access to property",
+    "items": {
+      "Grvl": {
+        "id": 0,
+        "description": "Gravel"
+      },
+      "Pave": {
+        "id": 1,
+        "description": "Paved"
+      }
+    }
+  },
+  "Alley": {
+    "description": "Type of alley access to property",
+    "items": {
+      "Grvl": {
+        "id": 0,
+        "description": "Gravel"
+      },
+      "Pave": {
+        "id": 1,
+        "description": "Paved"
+      },
+      "NA": {
+        "id": 2,
+        "description": "No alley access"
+      }
+    }
+  },
+  "LotShape": {
+    "description": "General shape of property",
+    "items": {
+      "Reg": {
+        "id": 0,
+        "description": "Regular"
+      },
+      "IR1": {
+        "id": 1,
+        "description": "Slightly irregular"
+      },
+      "IR2": {
+        "id": 2,
+        "description": "Moderately Irregular"
+      },
+      "IR3": {
+        "id": 3,
+        "description": "Irregular"
+      }
+    }
+  },
+  "LandContour": {
+    "description": "Flatness of the property",
+    "items": {
+      "Lvl": {
+        "id": 0,
+        "description": "Near Flat/Level"
+      },
+      "Bnk": {
+        "id": 1,
+        "description": "Banked - Quick and significant rise from street grade to building"
+      },
+      "HLS": {
+        "id": 2,
+        "description": "Hillside - Significant slope from side to side"
+      },
+      "Low": {
+        "id": 3,
+        "description": "Depression"
+      }
+    }
+  },
+  "Utilities": {
+    "description": "Type of utilities available",
+    "items": {
+      "AllPub": {
+        "id": 0,
+        "description": "All public Utilities (E,G,W,& S)"
+      },
+      "NoSewr": {
+        "id": 1,
+        "description": "Electricity, Gas, and Water (Septic Tank)"
+      },
+      "NoSeWa": {
+        "id": 2,
+        "description": "Electricity and Gas Only"
+      },
+      "ELO": {
+        "id": 3,
+        "description": "Electricity only"
+      }
+    }
+  },
+  "LotConfig": {
+    "description": "Lot configuration",
+    "items": {
+      "Inside": {
+        "id": 0,
+        "description": "Inside lot"
+      },
+      "Corner": {
+        "id": 1,
+        "description": "Corner lot"
+      },
+      "CulDSac": {
+        "id": 2,
+        "description": "Cul-de-sac"
+      },
+      "FR2": {
+        "id": 3,
+        "description": "Frontage on 2 sides of property"
+      },
+      "FR3": {
+        "id": 4,
+        "description": "Frontage on 3 sides of property"
+      }
+    }
+  },
+  "LandSlope": {
+    "description": "Slope of property",
+    "items": {
+      "Gtl": {
+        "id": 0,
+        "description": "Gentle slope"
+      },
+      "Mod": {
+        "id": 1,
+        "description": "Moderate Slope"
+      },
+      "Sev": {
+        "id": 2,
+        "description": "Severe Slope"
+      }
+    }
+  },
+  "Neighborhood": {
+    "description": "Physical locations within Ames city limits",
+    "items": {
+      "Blmngtn": {
+        "id": 0,
+        "description": "Bloomington Heights"
+      },
+      "Blueste": {
+        "id": 1,
+        "description": "Bluestem"
+      },
+      "BrDale": {
+        "id": 2,
+        "description": "Briardale"
+      },
+      "BrkSide": {
+        "id": 3,
+        "description": "Brookside"
+      },
+      "ClearCr": {
+        "id": 4,
+        "description": "Clear Creek"
+      },
+      "CollgCr": {
+        "id": 5,
+        "description": "College Creek"
+      },
+      "Crawfor": {
+        "id": 6,
+        "description": "Crawford"
+      },
+      "Edwards": {
+        "id": 7,
+        "description": "Edwards"
+      },
+      "Gilbert": {
+        "id": 8,
+        "description": "Gilbert"
+      },
+      "IDOTRR": {
+        "id": 9,
+        "description": "Iowa DOT and Rail Road"
+      },
+      "MeadowV": {
+        "id": 10,
+        "description": "Meadow Village"
+      },
+      "Mitchel": {
+        "id": 11,
+        "description": "Mitchell"
+      },
+      "NAmes": {
+        "id": 12,
+        "description": "North Ames"
+      },
+      "NoRidge": {
+        "id": 13,
+        "description": "Northridge"
+      },
+      "NPkVill": {
+        "id": 14,
+        "description": "Northpark Villa"
+      },
+      "NridgHt": {
+        "id": 15,
+        "description": "Northridge Heights"
+      },
+      "NWAmes": {
+        "id": 16,
+        "description": "Northwest Ames"
+      },
+      "OldTown": {
+        "id": 17,
+        "description": "Old Town"
+      },
+      "SWISU": {
+        "id": 18,
+        "description": "South & West of Iowa State University"
+      },
+      "Sawyer": {
+        "id": 19,
+        "description": "Sawyer"
+      },
+      "SawyerW": {
+        "id": 20,
+        "description": "Sawyer West"
+      },
+      "Somerst": {
+        "id": 21,
+        "description": "Somerset"
+      },
+      "StoneBr": {
+        "id": 22,
+        "description": "Stone Brook"
+      },
+      "Timber": {
+        "id": 23,
+        "description": "Timberland"
+      },
+      "Veenker": {
+        "id": 24,
+        "description": "Veenker"
+      }
+    }
+  },
+  "Condition1": {
+    "description": "Proximity to various conditions",
+    "items": {
+      "Artery": {
+        "id": 0,
+        "description": "Adjacent to arterial street"
+      },
+      "Feedr": {
+        "id": 1,
+        "description": "Adjacent to feeder street"
+      },
+      "Norm": {
+        "id": 2,
+        "description": "Normal"
+      },
+      "RRNn": {
+        "id": 3,
+        "description": "Within 200' of North-South Railroad"
+      },
+      "RRAn": {
+        "id": 4,
+        "description": "Adjacent to North-South Railroad"
+      },
+      "PosN": {
+        "id": 5,
+        "description": "Near positive off-site feature--park, greenbelt, etc."
+      },
+      "PosA": {
+        "id": 6,
+        "description": "Adjacent to postive off-site feature"
+      },
+      "RRNe": {
+        "id": 7,
+        "description": "Within 200' of East-West Railroad"
+      },
+      "RRAe": {
+        "id": 8,
+        "description": "Adjacent to East-West Railroad"
+      }
+    }
+  },
+  "Condition2": {
+    "description": "Proximity to various conditions (if more than one is present)",
+    "items": {
+      "Artery": {
+        "id": 0,
+        "description": "Adjacent to arterial street"
+      },
+      "Feedr": {
+        "id": 1,
+        "description": "Adjacent to feeder street"
+      },
+      "Norm": {
+        "id": 2,
+        "description": "Normal"
+      },
+      "RRNn": {
+        "id": 3,
+        "description": "Within 200' of North-South Railroad"
+      },
+      "RRAn": {
+        "id": 4,
+        "description": "Adjacent to North-South Railroad"
+      },
+      "PosN": {
+        "id": 5,
+        "description": "Near positive off-site feature--park, greenbelt, etc."
+      },
+      "PosA": {
+        "id": 6,
+        "description": "Adjacent to postive off-site feature"
+      },
+      "RRNe": {
+        "id": 7,
+        "description": "Within 200' of East-West Railroad"
+      },
+      "RRAe": {
+        "id": 8,
+        "description": "Adjacent to East-West Railroad"
+      }
+    }
+  },
+  "BldgType": {
+    "description": "Type of dwelling",
+    "items": {
+      "1Fam": {
+        "id": 0,
+        "description": "Single-family Detached"
+      },
+      "2fmCon": {
+        "id": 1,
+        "description": "Two-family Conversion; originally built as one-family dwelling"
+      },
+      "Duplex": {
+        "id": 2,
+        "description": "Duplex"
+      },
+      "TwnhsE": {
+        "id": 3,
+        "description": "Townhouse End Unit"
+      },
+      "Twnhs": {
+        "id": 4,
+        "description": "Townhouse Inside Unit"
+      }
+    }
+  },
+  "HouseStyle": {
+    "description": "Style of dwelling",
+    "items": {
+      "1Story": {
+        "id": 0,
+        "description": "One story"
+      },
+      "1.5Fin": {
+        "id": 1,
+        "description": "One and one-half story: 2nd level finished"
+      },
+      "1.5Unf": {
+        "id": 2,
+        "description": "One and one-half story: 2nd level unfinished"
+      },
+      "2Story": {
+        "id": 3,
+        "description": "Two story"
+      },
+      "2.5Fin": {
+        "id": 4,
+        "description": "Two and one-half story: 2nd level finished"
+      },
+      "2.5Unf": {
+        "id": 5,
+        "description": "Two and one-half story: 2nd level unfinished"
+      },
+      "SFoyer": {
+        "id": 6,
+        "description": "Split Foyer"
+      },
+      "SLvl": {
+        "id": 7,
+        "description": "Split Level"
+      }
+    }
+  },
+  "OverallQual": {
+    "description": "Rates the overall material and finish of the house",
+    "items": {
+      "10": {
+        "id": 0,
+        "description": "Very Excellent"
+      },
+      "9": {
+        "id": 1,
+        "description": "Excellent"
+      },
+      "8": {
+        "id": 2,
+        "description": "Very Good"
+      },
+      "7": {
+        "id": 3,
+        "description": "Good"
+      },
+      "6": {
+        "id": 4,
+        "description": "Above Average"
+      },
+      "5": {
+        "id": 5,
+        "description": "Average"
+      },
+      "4": {
+        "id": 6,
+        "description": "Below Average"
+      },
+      "3": {
+        "id": 7,
+        "description": "Fair"
+      },
+      "2": {
+        "id": 8,
+        "description": "Poor"
+      },
+      "1": {
+        "id": 9,
+        "description": "Very Poor"
+      }
+    }
+  },
+  "OverallCond": {
+    "description": "Rates the overall condition of the house",
+    "items": {
+      "10": {
+        "id": 0,
+        "description": "Very Excellent"
+      },
+      "9": {
+        "id": 1,
+        "description": "Excellent"
+      },
+      "8": {
+        "id": 2,
+        "description": "Very Good"
+      },
+      "7": {
+        "id": 3,
+        "description": "Good"
+      },
+      "6": {
+        "id": 4,
+        "description": "Above Average"
+      },
+      "5": {
+        "id": 5,
+        "description": "Average"
+      },
+      "4": {
+        "id": 6,
+        "description": "Below Average"
+      },
+      "3": {
+        "id": 7,
+        "description": "Fair"
+      },
+      "2": {
+        "id": 8,
+        "description": "Poor"
+      },
+      "1": {
+        "id": 9,
+        "description": "Very Poor"
+      }
+    }
+  },
+  "YearBuilt": {
+    "description": "Original construction date",
+    "items": null
+  },
+  "YearRemodAdd": {
+    "description": "Remodel date (same as construction date if no remodeling or additions)",
+    "items": null
+  },
+  "RoofStyle": {
+    "description": "Type of roof",
+    "items": {
+      "Flat": {
+        "id": 0,
+        "description": "Flat"
+      },
+      "Gable": {
+        "id": 1,
+        "description": "Gable"
+      },
+      "Gambrel": {
+        "id": 2,
+        "description": "Gabrel (Barn)"
+      },
+      "Hip": {
+        "id": 3,
+        "description": "Hip"
+      },
+      "Mansard": {
+        "id": 4,
+        "description": "Mansard"
+      },
+      "Shed": {
+        "id": 5,
+        "description": "Shed"
+      }
+    }
+  },
+  "RoofMatl": {
+    "description": "Roof material",
+    "items": {
+      "ClyTile": {
+        "id": 0,
+        "description": "Clay or Tile"
+      },
+      "CompShg": {
+        "id": 1,
+        "description": "Standard (Composite) Shingle"
+      },
+      "Membran": {
+        "id": 2,
+        "description": "Membrane"
+      },
+      "Metal": {
+        "id": 3,
+        "description": "Metal"
+      },
+      "Roll": {
+        "id": 4,
+        "description": "Roll"
+      },
+      "Tar&Grv": {
+        "id": 5,
+        "description": "Gravel & Tar"
+      },
+      "WdShake": {
+        "id": 6,
+        "description": "Wood Shakes"
+      },
+      "WdShngl": {
+        "id": 7,
+        "description": "Wood Shingles"
+      }
+    }
+  },
+  "Exterior1st": {
+    "description": "Exterior covering on house",
+    "items": {
+      "AsbShng": {
+        "id": 0,
+        "description": "Asbestos Shingles"
+      },
+      "AsphShn": {
+        "id": 1,
+        "description": "Asphalt Shingles"
+      },
+      "BrkComm": {
+        "id": 2,
+        "description": "Brick Common"
+      },
+      "BrkFace": {
+        "id": 3,
+        "description": "Brick Face"
+      },
+      "CBlock": {
+        "id": 4,
+        "description": "Cinder Block"
+      },
+      "CemntBd": {
+        "id": 5,
+        "description": "Cement Board"
+      },
+      "HdBoard": {
+        "id": 6,
+        "description": "Hard Board"
+      },
+      "ImStucc": {
+        "id": 7,
+        "description": "Imitation Stucco"
+      },
+      "MetalSd": {
+        "id": 8,
+        "description": "Metal Siding"
+      },
+      "Other": {
+        "id": 9,
+        "description": "Other"
+      },
+      "Plywood": {
+        "id": 10,
+        "description": "Plywood"
+      },
+      "PreCast": {
+        "id": 11,
+        "description": "PreCast"
+      },
+      "Stone": {
+        "id": 12,
+        "description": "Stone"
+      },
+      "Stucco": {
+        "id": 13,
+        "description": "Stucco"
+      },
+      "VinylSd": {
+        "id": 14,
+        "description": "Vinyl Siding"
+      },
+      "Wd Sdng": {
+        "id": 15,
+        "description": "Wood Siding"
+      },
+      "WdShing": {
+        "id": 16,
+        "description": "Wood Shingles"
+      }
+    }
+  },
+  "Exterior2nd": {
+    "description": "Exterior covering on house (if more than one material)",
+    "items": {
+      "AsbShng": {
+        "id": 0,
+        "description": "Asbestos Shingles"
+      },
+      "AsphShn": {
+        "id": 1,
+        "description": "Asphalt Shingles"
+      },
+      "BrkComm": {
+        "id": 2,
+        "description": "Brick Common"
+      },
+      "BrkFace": {
+        "id": 3,
+        "description": "Brick Face"
+      },
+      "CBlock": {
+        "id": 4,
+        "description": "Cinder Block"
+      },
+      "CemntBd": {
+        "id": 5,
+        "description": "Cement Board"
+      },
+      "HdBoard": {
+        "id": 6,
+        "description": "Hard Board"
+      },
+      "ImStucc": {
+        "id": 7,
+        "description": "Imitation Stucco"
+      },
+      "MetalSd": {
+        "id": 8,
+        "description": "Metal Siding"
+      },
+      "Other": {
+        "id": 9,
+        "description": "Other"
+      },
+      "Plywood": {
+        "id": 10,
+        "description": "Plywood"
+      },
+      "PreCast": {
+        "id": 11,
+        "description": "PreCast"
+      },
+      "Stone": {
+        "id": 12,
+        "description": "Stone"
+      },
+      "Stucco": {
+        "id": 13,
+        "description": "Stucco"
+      },
+      "VinylSd": {
+        "id": 14,
+        "description": "Vinyl Siding"
+      },
+      "Wd": {
+        "id": 15,
+        "description": "\tWood Siding"
+      },
+      "WdShing": {
+        "id": 16,
+        "description": "Wood Shingles"
+      }
+    }
+  },
+  "MasVnrType": {
+    "description": "Masonry veneer type",
+    "items": {
+      "BrkCmn": {
+        "id": 0,
+        "description": "Brick Common"
+      },
+      "BrkFace": {
+        "id": 1,
+        "description": "Brick Face"
+      },
+      "CBlock": {
+        "id": 2,
+        "description": "Cinder Block"
+      },
+      "None": {
+        "id": 3,
+        "description": "None"
+      },
+      "Stone": {
+        "id": 4,
+        "description": "Stone"
+      }
+    }
+  },
+  "MasVnrArea": {
+    "description": "Masonry veneer area in square feet",
+    "items": null
+  },
+  "ExterQual": {
+    "description": "Evaluates the quality of the material on the exterior",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Average/Typical"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor"
+      }
+    }
+  },
+  "ExterCond": {
+    "description": "Evaluates the present condition of the material on the exterior",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Average/Typical"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor"
+      }
+    }
+  },
+  "Foundation": {
+    "description": "Type of foundation",
+    "items": {
+      "BrkTil": {
+        "id": 0,
+        "description": "Brick & Tile"
+      },
+      "CBlock": {
+        "id": 1,
+        "description": "Cinder Block"
+      },
+      "PConc": {
+        "id": 2,
+        "description": "Poured Contrete"
+      },
+      "Slab": {
+        "id": 3,
+        "description": "Slab"
+      },
+      "Stone": {
+        "id": 4,
+        "description": "Stone"
+      },
+      "Wood": {
+        "id": 5,
+        "description": "Wood"
+      }
+    }
+  },
+  "BsmtQual": {
+    "description": "Evaluates the height of the basement",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent (100+ inches)"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good (90-99 inches)"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Typical (80-89 inches)"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair (70-79 inches)"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor (<70 inches"
+      },
+      "NA": {
+        "id": 5,
+        "description": "No Basement"
+      }
+    }
+  },
+  "BsmtCond": {
+    "description": "Evaluates the general condition of the basement",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Typical - slight dampness allowed"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair - dampness or some cracking or settling"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor - Severe cracking, settling, or wetness"
+      },
+      "NA": {
+        "id": 5,
+        "description": "No Basement"
+      }
+    }
+  },
+  "BsmtExposure": {
+    "description": "Refers to walkout or garden level walls",
+    "items": {
+      "Gd": {
+        "id": 0,
+        "description": "Good Exposure"
+      },
+      "Av": {
+        "id": 1,
+        "description": "Average Exposure (split levels or foyers typically score average or above)"
+      },
+      "Mn": {
+        "id": 2,
+        "description": "Mimimum Exposure"
+      },
+      "No": {
+        "id": 3,
+        "description": "No Exposure"
+      },
+      "NA": {
+        "id": 4,
+        "description": "No Basement"
+      }
+    }
+  },
+  "BsmtFinType1": {
+    "description": "Rating of basement finished area",
+    "items": {
+      "GLQ": {
+        "id": 0,
+        "description": "Good Living Quarters"
+      },
+      "ALQ": {
+        "id": 1,
+        "description": "Average Living Quarters"
+      },
+      "BLQ": {
+        "id": 2,
+        "description": "Below Average Living Quarters"
+      },
+      "Rec": {
+        "id": 3,
+        "description": "Average Rec Room"
+      },
+      "LwQ": {
+        "id": 4,
+        "description": "Low Quality"
+      },
+      "Unf": {
+        "id": 5,
+        "description": "Unfinshed"
+      },
+      "NA": {
+        "id": 6,
+        "description": "No Basement"
+      }
+    }
+  },
+  "BsmtFinSF1": {
+    "description": "Type 1 finished square feet",
+    "items": null
+  },
+  "BsmtFinType2": {
+    "description": "Rating of basement finished area (if multiple types)",
+    "items": {
+      "GLQ": {
+        "id": 0,
+        "description": "Good Living Quarters"
+      },
+      "ALQ": {
+        "id": 1,
+        "description": "Average Living Quarters"
+      },
+      "BLQ": {
+        "id": 2,
+        "description": "Below Average Living Quarters"
+      },
+      "Rec": {
+        "id": 3,
+        "description": "Average Rec Room"
+      },
+      "LwQ": {
+        "id": 4,
+        "description": "Low Quality"
+      },
+      "Unf": {
+        "id": 5,
+        "description": "Unfinshed"
+      },
+      "NA": {
+        "id": 6,
+        "description": "No Basement"
+      }
+    }
+  },
+  "BsmtFinSF2": {
+    "description": "Type 2 finished square feet",
+    "items": null
+  },
+  "BsmtUnfSF": {
+    "description": "Unfinished square feet of basement area",
+    "items": null
+  },
+  "TotalBsmtSF": {
+    "description": "Total square feet of basement area",
+    "items": null
+  },
+  "Heating": {
+    "description": "Type of heating",
+    "items": {
+      "Floor": {
+        "id": 0,
+        "description": "Floor Furnace"
+      },
+      "GasA": {
+        "id": 1,
+        "description": "Gas forced warm air furnace"
+      },
+      "GasW": {
+        "id": 2,
+        "description": "Gas hot water or steam heat"
+      },
+      "Grav": {
+        "id": 3,
+        "description": "Gravity furnace"
+      },
+      "OthW": {
+        "id": 4,
+        "description": "Hot water or steam heat other than gas"
+      },
+      "Wall": {
+        "id": 5,
+        "description": "Wall furnace"
+      }
+    }
+  },
+  "HeatingQC": {
+    "description": "Heating quality and condition",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Average/Typical"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor"
+      }
+    }
+  },
+  "CentralAir": {
+    "description": "Central air conditioning",
+    "items": {
+      "N": {
+        "id": 0,
+        "description": "No"
+      },
+      "Y": {
+        "id": 1,
+        "description": "Yes"
+      }
+    }
+  },
+  "Electrical": {
+    "description": "Electrical system",
+    "items": {
+      "SBrkr": {
+        "id": 0,
+        "description": "Standard Circuit Breakers & Romex"
+      },
+      "FuseA": {
+        "id": 1,
+        "description": "Fuse Box over 60 AMP and all Romex wiring (Average)"
+      },
+      "FuseF": {
+        "id": 2,
+        "description": "60 AMP Fuse Box and mostly Romex wiring (Fair)"
+      },
+      "FuseP": {
+        "id": 3,
+        "description": "60 AMP Fuse Box and mostly knob & tube wiring (poor)"
+      },
+      "Mix": {
+        "id": 4,
+        "description": "Mixed"
+      }
+    }
+  },
+  "1stFlrSF": {
+    "description": "First Floor square feet",
+    "items": null
+  },
+  "2ndFlrSF": {
+    "description": "Second floor square feet",
+    "items": null
+  },
+  "LowQualFinSF": {
+    "description": "Low quality finished square feet (all floors)",
+    "items": null
+  },
+  "GrLivArea": {
+    "description": "Above grade (ground) living area square feet",
+    "items": null
+  },
+  "BsmtFullBath": {
+    "description": "Basement full bathrooms",
+    "items": null
+  },
+  "BsmtHalfBath": {
+    "description": "Basement half bathrooms",
+    "items": null
+  },
+  "FullBath": {
+    "description": "Full bathrooms above grade",
+    "items": null
+  },
+  "HalfBath": {
+    "description": "Half baths above grade",
+    "items": null
+  },
+  "Bedroom": {
+    "description": "Bedrooms above grade (does NOT include basement bedrooms)",
+    "items": null
+  },
+  "Kitchen": {
+    "description": "Kitchens above grade",
+    "items": null
+  },
+  "KitchenQual": {
+    "description": "Kitchen quality",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Typical/Average"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor"
+      }
+    }
+  },
+  "TotRmsAbvGrd": {
+    "description": "Total rooms above grade (does not include bathrooms)",
+    "items": null
+  },
+  "Functional": {
+    "description": "Home functionality (Assume typical unless deductions are warranted)",
+    "items": {
+      "Typ": {
+        "id": 0,
+        "description": "Typical Functionality"
+      },
+      "Min1": {
+        "id": 1,
+        "description": "Minor Deductions 1"
+      },
+      "Min2": {
+        "id": 2,
+        "description": "Minor Deductions 2"
+      },
+      "Mod": {
+        "id": 3,
+        "description": "Moderate Deductions"
+      },
+      "Maj1": {
+        "id": 4,
+        "description": "Major Deductions 1"
+      },
+      "Maj2": {
+        "id": 5,
+        "description": "Major Deductions 2"
+      },
+      "Sev": {
+        "id": 6,
+        "description": "Severely Damaged"
+      },
+      "Sal": {
+        "id": 7,
+        "description": "Salvage only"
+      }
+    }
+  },
+  "Fireplaces": {
+    "description": "Number of fireplaces",
+    "items": null
+  },
+  "FireplaceQu": {
+    "description": "Fireplace quality",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent - Exceptional Masonry Fireplace"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good - Masonry Fireplace in main level"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Average - Prefabricated Fireplace in main living area or Masonry Fireplace in basement"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair - Prefabricated Fireplace in basement"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor - Ben Franklin Stove"
+      },
+      "NA": {
+        "id": 5,
+        "description": "No Fireplace"
+      }
+    }
+  },
+  "GarageType": {
+    "description": "Garage location",
+    "items": {
+      "2Types": {
+        "id": 0,
+        "description": "More than one type of garage"
+      },
+      "Attchd": {
+        "id": 1,
+        "description": "Attached to home"
+      },
+      "Basment": {
+        "id": 2,
+        "description": "Basement Garage"
+      },
+      "BuiltIn": {
+        "id": 3,
+        "description": "Built-In (Garage part of house - typically has room above garage)"
+      },
+      "CarPort": {
+        "id": 4,
+        "description": "Car Port"
+      },
+      "Detchd": {
+        "id": 5,
+        "description": "Detached from home"
+      },
+      "NA": {
+        "id": 6,
+        "description": "No Garage"
+      }
+    }
+  },
+  "GarageYrBlt": {
+    "description": "Year garage was built",
+    "items": null
+  },
+  "GarageFinish": {
+    "description": "Interior finish of the garage",
+    "items": {
+      "Fin": {
+        "id": 0,
+        "description": "Finished"
+      },
+      "RFn": {
+        "id": 1,
+        "description": "Rough Finished"
+      },
+      "Unf": {
+        "id": 2,
+        "description": "Unfinished"
+      },
+      "NA": {
+        "id": 3,
+        "description": "No Garage"
+      }
+    }
+  },
+  "GarageCars": {
+    "description": "Size of garage in car capacity",
+    "items": null
+  },
+  "GarageArea": {
+    "description": "Size of garage in square feet",
+    "items": null
+  },
+  "GarageQual": {
+    "description": "Garage quality",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Typical/Average"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor"
+      },
+      "NA": {
+        "id": 5,
+        "description": "No Garage"
+      }
+    }
+  },
+  "GarageCond": {
+    "description": "Garage condition",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Typical/Average"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair"
+      },
+      "Po": {
+        "id": 4,
+        "description": "Poor"
+      },
+      "NA": {
+        "id": 5,
+        "description": "No Garage"
+      }
+    }
+  },
+  "PavedDrive": {
+    "description": "Paved driveway",
+    "items": {
+      "Y": {
+        "id": 0,
+        "description": "Paved"
+      },
+      "P": {
+        "id": 1,
+        "description": "Partial Pavement"
+      },
+      "N": {
+        "id": 2,
+        "description": "Dirt/Gravel"
+      }
+    }
+  },
+  "WoodDeckSF": {
+    "description": "Wood deck area in square feet",
+    "items": null
+  },
+  "OpenPorchSF": {
+    "description": "Open porch area in square feet",
+    "items": null
+  },
+  "EnclosedPorch": {
+    "description": "Enclosed porch area in square feet",
+    "items": null
+  },
+  "3SsnPorch": {
+    "description": "Three season porch area in square feet",
+    "items": null
+  },
+  "ScreenPorch": {
+    "description": "Screen porch area in square feet",
+    "items": null
+  },
+  "PoolArea": {
+    "description": "Pool area in square feet",
+    "items": null
+  },
+  "PoolQC": {
+    "description": "Pool quality",
+    "items": {
+      "Ex": {
+        "id": 0,
+        "description": "Excellent"
+      },
+      "Gd": {
+        "id": 1,
+        "description": "Good"
+      },
+      "TA": {
+        "id": 2,
+        "description": "Average/Typical"
+      },
+      "Fa": {
+        "id": 3,
+        "description": "Fair"
+      },
+      "NA": {
+        "id": 4,
+        "description": "No Pool"
+      }
+    }
+  },
+  "Fence": {
+    "description": "Fence quality",
+    "items": {
+      "GdPrv": {
+        "id": 0,
+        "description": "Good Privacy"
+      },
+      "MnPrv": {
+        "id": 1,
+        "description": "Minimum Privacy"
+      },
+      "GdWo": {
+        "id": 2,
+        "description": "Good Wood"
+      },
+      "MnWw": {
+        "id": 3,
+        "description": "Minimum Wood/Wire"
+      },
+      "NA": {
+        "id": 4,
+        "description": "No Fence"
+      }
+    }
+  },
+  "MiscFeature": {
+    "description": "Miscellaneous feature not covered in other categories",
+    "items": {
+      "Elev": {
+        "id": 0,
+        "description": "Elevator"
+      },
+      "Gar2": {
+        "id": 1,
+        "description": "2nd Garage (if not described in garage section)"
+      },
+      "Othr": {
+        "id": 2,
+        "description": "Other"
+      },
+      "Shed": {
+        "id": 3,
+        "description": "Shed (over 100 SF)"
+      },
+      "TenC": {
+        "id": 4,
+        "description": "Tennis Court"
+      },
+      "NA": {
+        "id": 5,
+        "description": "None"
+      }
+    }
+  },
+  "MiscVal": {
+    "description": "$Value of miscellaneous feature",
+    "items": null
+  },
+  "MoSold": {
+    "description": "Month Sold (MM)",
+    "items": null
+  },
+  "YrSold": {
+    "description": "Year Sold (YYYY)",
+    "items": null
+  },
+  "SaleType": {
+    "description": "Type of sale",
+    "items": {
+      "WD": {
+        "id": 0,
+        "description": "Warranty Deed - Conventional"
+      },
+      "CWD": {
+        "id": 1,
+        "description": "Warranty Deed - Cash"
+      },
+      "VWD": {
+        "id": 2,
+        "description": "Warranty Deed - VA Loan"
+      },
+      "New": {
+        "id": 3,
+        "description": "Home just constructed and sold"
+      },
+      "COD": {
+        "id": 4,
+        "description": "Court Officer Deed/Estate"
+      },
+      "Con": {
+        "id": 5,
+        "description": "Contract 15% Down payment regular terms"
+      },
+      "ConLw": {
+        "id": 6,
+        "description": "Contract Low Down payment and low interest"
+      },
+      "ConLI": {
+        "id": 7,
+        "description": "Contract Low Interest"
+      },
+      "ConLD": {
+        "id": 8,
+        "description": "Contract Low Down"
+      },
+      "Oth": {
+        "id": 9,
+        "description": "Other"
+      }
+    }
+  },
+  "SaleCondition": {
+    "description": "Condition of sale",
+    "items": {
+      "Normal": {
+        "id": 0,
+        "description": "Normal Sale"
+      },
+      "Abnorml": {
+        "id": 1,
+        "description": "Abnormal Sale -  trade, foreclosure, short sale"
+      },
+      "AdjLand": {
+        "id": 2,
+        "description": "Adjoining Land Purchase"
+      },
+      "Alloca": {
+        "id": 3,
+        "description": "Allocation - two linked properties with separate deeds, typically condo with a garage unit"
+      },
+      "Family": {
+        "id": 4,
+        "description": "Sale between family members"
+      },
+      "Partial": {
+        "id": 5,
+        "description": "Home was not completed when last assessed (associated with New Homes)"
+      }
+    }
+  }
+}
