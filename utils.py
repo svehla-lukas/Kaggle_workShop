@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import re
+import matplotlib.pyplot as plt
 
 """CSV file I/O utilities."""
 
@@ -84,3 +85,40 @@ def parse_description_txt_to_json(txt_path: str, json_path: str):
         json.dump(result, f, indent=2, ensure_ascii=False)
 
     print(f"✅ Done! JSON has been saved to: {json_path}")
+
+
+""" plot data """
+
+
+def plot_history(
+    history_dict: dict, metric: str = "mae"
+) -> tuple[list[float], list[float]]:
+    """
+    Plots training and validation metrics from the history dictionary.
+
+    Args:
+        history_dict (dict): The history dictionary, usually from model.fit().history
+        metric (str): The metric to plot ("mae" or "loss")
+
+    Returns:
+        tuple: (training_values, validation_values)
+    """
+    if metric not in ["mae", "loss"]:
+        raise ValueError("Supported metrics are 'mae' and 'loss'")
+
+    train_metric = history_dict[metric]
+    val_metric = history_dict[f"val_{metric}"]
+    epochs = range(1, len(train_metric) + 1)
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(epochs, train_metric, "bo-", label=f"Training {metric.upper()}")
+    plt.plot(epochs, val_metric, "ro-", label=f"Validation {metric.upper()}")
+    plt.title(f"Training and Validation {metric.upper()}")
+    plt.xlabel("Epochs")
+    plt.ylabel(metric.upper() if metric == "loss" else "Mean Absolute Error")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+    # return train_metric, val_metric
