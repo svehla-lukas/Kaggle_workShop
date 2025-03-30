@@ -2,6 +2,7 @@ import pandas as pd
 import json
 import re
 import matplotlib.pyplot as plt
+import numpy as np
 
 """CSV file I/O utilities."""
 
@@ -27,8 +28,6 @@ def load_csv_data(file_name: str) -> pd.DataFrame:
 
 
 """ Prepare data for training and testing."""
-
-
 import json
 import re
 
@@ -85,6 +84,31 @@ def parse_description_txt_to_json(txt_path: str, json_path: str):
         json.dump(result, f, indent=2, ensure_ascii=False)
 
     print(f"✅ Done! JSON has been saved to: {json_path}")
+
+
+def auto_clean_columns(df: pd.DataFrame) -> pd.DataFrame:
+    df_cleaned = df.copy()
+
+    for column in df_cleaned.columns:
+        values = df_cleaned[column].dropna().unique()
+
+        can_be_numeric = True
+        for v in values:
+            if isinstance(v, str) and v.strip().upper() == "NA":
+                continue
+            try:
+                float(v)
+            except:
+                can_be_numeric = False
+                break
+
+        if can_be_numeric:
+            df_cleaned[column] = df_cleaned[column].replace("NA", np.nan)
+            df_cleaned[column] = pd.to_numeric(df_cleaned[column], errors="coerce")
+        else:
+            df_cleaned[column] = df_cleaned[column].astype(str).str.strip().str.upper()
+
+    return df_cleaned
 
 
 """ plot data """
