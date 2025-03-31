@@ -4,6 +4,18 @@ import re
 import matplotlib.pyplot as plt
 import numpy as np
 
+""" support blocks """
+
+
+def to_numpy(x):
+    if isinstance(x, (pd.DataFrame, pd.Series)):
+        return x.to_numpy()
+    elif isinstance(x, np.ndarray):
+        return x
+    else:
+        return np.array(x)
+
+
 """CSV file I/O utilities."""
 
 
@@ -105,8 +117,10 @@ def auto_clean_columns(df: pd.DataFrame) -> pd.DataFrame:
         if can_be_numeric:
             df_cleaned[column] = df_cleaned[column].replace("NA", np.nan)
             df_cleaned[column] = pd.to_numeric(df_cleaned[column], errors="coerce")
+            # NaN u čísel zůstane (budeme řešit později imputací nebo ignorováním)
         else:
             df_cleaned[column] = df_cleaned[column].astype(str).str.strip().str.upper()
+            df_cleaned[column] = df_cleaned[column].fillna("MISSING")  # důležité!
 
     return df_cleaned
 
@@ -146,3 +160,35 @@ def plot_history(
     plt.show()
 
     # return train_metric, val_metric
+
+
+def plot_rescaled_history(history_dict, metric: str, scaler):
+    # Get scaling factor from StandardScaler
+    scale = scaler.scale_[0]
+
+    # Extract metrics from history
+    train_metric = history_dict[metric]
+    val_metric = history_dict[f"val_{metric}"]
+    epochs = range(1, len(train_metric) + 1)
+
+    # Rescale metrics back to original dollar scale
+    if metric == "loss":  # MSE → scale^2
+        train_metric_rescaled = [m * (scale**2) for m in train_metric]
+        val_metric_rescaled = [m * (scale**2) for m in val_metric]
+        y_label = "Mean Squared Error ($)"
+    else:  # MAE → scale
+        train_metric_rescaled = [m * scale for m in train_metric]
+        val_metric_rescaled = [m * scale for m in val_metric]
+        y_label = "Mean Absolute Error ($)"
+
+    # Plot
+    plt.figure(figsize=(10, 6))
+    plt.plot(epochs, train_metric_rescaled, "bo-", label=f"Training {metric.upper()}")
+    plt.plot(epochs, val_metric_rescaled, "ro-", label=f"Validation {metric.upper()}")
+    plt.title(f"Training and Validation {metric.upper()} (Rescaled to USD)")
+    plt.xlabel("Epochs")
+    plt.ylabel(y_label)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
