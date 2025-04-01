@@ -141,7 +141,7 @@ def plot_history(
     Returns:
         tuple: (training_values, validation_values)
     """
-    if metric not in ["mae", "loss"]:
+    if metric not in ["mae", "loss", "mae_real", "loss_real"]:
         raise ValueError("Supported metrics are 'mae' and 'loss'")
 
     train_metric = history_dict[metric]
