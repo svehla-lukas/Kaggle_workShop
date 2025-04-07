@@ -3,6 +3,7 @@ import json
 import re
 import matplotlib.pyplot as plt
 import numpy as np
+from typing import Literal, Optional
 
 """ support blocks """
 
@@ -128,38 +129,65 @@ def auto_clean_columns(df: pd.DataFrame) -> pd.DataFrame:
 """ plot data """
 
 
-def plot_history(
-    history_dict: dict, metric: str = "mae"
-) -> tuple[list[float], list[float]]:
+def plot_training_history(
+    history,
+    metric: str,
+    metric2: Optional[str] = None,
+) -> None:
     """
-    Plots training and validation metrics from the history dictionary.
+    Plots training and validation curves for one or two selected metrics.
 
     Args:
-        history_dict (dict): The history dictionary, usually from model.fit().history
-        metric (str): The metric to plot ("mae" or "loss")
-
-    Returns:
-        tuple: (training_values, validation_values)
+        history: History object returned by model.fit().
+        metric: The primary metric to plot (e.g., "loss", "accuracy", "mae", etc.).
+        metric2: Optional second metric to plot.
     """
-    if metric not in ["mae", "loss", "mae_real", "loss_real"]:
-        raise ValueError("Supported metrics are 'mae' and 'loss'")
 
-    train_metric = history_dict[metric]
-    val_metric = history_dict[f"val_{metric}"]
-    epochs = range(1, len(train_metric) + 1)
+    available_metrics = list(history.history.keys())
+    available_base_metrics = set(
+        key.replace("val_", "")
+        for key in available_metrics
+        if not key.startswith("val_")
+    )
 
-    plt.figure(figsize=(10, 6))
-    plt.plot(epochs, train_metric, "bo-", label=f"Training {metric.upper()}")
-    plt.plot(epochs, val_metric, "ro-", label=f"Validation {metric.upper()}")
-    plt.title(f"Training and Validation {metric.upper()}")
-    plt.xlabel("Epochs")
-    plt.ylabel(metric.upper() if metric == "loss" else "Mean Absolute Error")
-    plt.legend()
-    plt.grid(True)
+    def validate_metric(metric_name: str):
+        if metric_name not in available_base_metrics:
+            raise ValueError(
+                f"Metric '{metric_name}' not found in history.\n"
+                f"Available metrics: {sorted(available_base_metrics)}"
+            )
+
+    def plot_subplot(subplot_index: int, metric_name: str):
+        validate_metric(metric_name)
+        train_key = metric_name
+        val_key = f"val_{metric_name}"
+        train_values = history.history[train_key]
+        val_values = history.history.get(val_key)
+
+        epochs = range(1, len(train_values) + 1)
+        plt.subplot(1, 2 if metric2 else 1, subplot_index)
+        plt.plot(epochs, train_values, "bo-", label=f"Training {metric_name}")
+
+        if val_values is not None:
+            plt.plot(epochs, val_values, "ro-", label=f"Validation {metric_name}")
+        else:
+            print(f"⚠️ Validation metric '{val_key}' not found. Plotting training only.")
+
+        plt.title(f"Training and Validation {metric_name.capitalize()}")
+        plt.xlabel("Epochs")
+        plt.ylabel(metric_name.capitalize())
+        plt.legend()
+        plt.grid(True)
+
+    metric = metric.lower()
+    metric2 = metric2.lower() if metric2 else None
+
+    plt.figure(figsize=(12 if metric2 else 8, 5))
+    plot_subplot(1, metric)
+    if metric2:
+        plot_subplot(2, metric2)
     plt.tight_layout()
     plt.show()
-
-    # return train_metric, val_metric
 
 
 def plot_rescaled_history(history_dict, metric: str, scaler):
