@@ -141,11 +141,11 @@ BldgType: Type of dwelling
 HouseStyle: Style of dwelling
 	
        1Story	One story
-       1.5Fin	One and one-half story - 2nd level finished
-       1.5Unf	One and one-half story - 2nd level unfinished
+       1.5Fin	One and one-half story: 2nd level finished
+       1.5Unf	One and one-half story: 2nd level unfinished
        2Story	Two story
-       2.5Fin	Two and one-half story - 2nd level finished
-       2.5Unf	Two and one-half story - 2nd level unfinished
+       2.5Fin	Two and one-half story: 2nd level finished
+       2.5Unf	Two and one-half story: 2nd level unfinished
        SFoyer	Split Foyer
        SLvl	Split Level
 	
@@ -374,9 +374,9 @@ FullBath: Full bathrooms above grade
 
 HalfBath: Half baths above grade
 
-BedroomAbvGr: Bedrooms above grade (does NOT include basement bedrooms)
+Bedroom: Bedrooms above grade (does NOT include basement bedrooms)
 
-KitchenAbvGr: Kitchens above grade
+Kitchen: Kitchens above grade
 
 KitchenQual: Kitchen quality
 

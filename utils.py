@@ -4,6 +4,8 @@ import re
 import matplotlib.pyplot as plt
 import numpy as np
 from typing import Literal, Optional
+from scipy import stats
+
 
 """ support blocks """
 
@@ -190,33 +192,109 @@ def plot_training_history(
     plt.show()
 
 
-def plot_rescaled_history(history_dict, metric: str, scaler):
+def plot_rescaled_history(
+    history_dict, metric: str, metric2: Optional[str] = None, scaler=None
+):
     # Get scaling factor from StandardScaler
     scale = scaler.scale_[0]
 
-    # Extract metrics from history
-    train_metric = history_dict[metric]
-    val_metric = history_dict[f"val_{metric}"]
-    epochs = range(1, len(train_metric) + 1)
+    def plot_subplot(subplot_index: int, metric_name: str):
+        # Extract metrics from history
+        train_metric = history_dict[metric_name]
+        val_metric = history_dict[f"val_{metric_name}"]
+        epochs = range(1, len(train_metric) + 1)
 
-    # Rescale metrics back to original dollar scale
-    if metric == "loss":  # MSE → scale^2
-        train_metric_rescaled = [m * (scale**2) for m in train_metric]
-        val_metric_rescaled = [m * (scale**2) for m in val_metric]
-        y_label = "Mean Squared Error ($)"
-    else:  # MAE → scale
-        train_metric_rescaled = [m * scale for m in train_metric]
-        val_metric_rescaled = [m * scale for m in val_metric]
-        y_label = "Mean Absolute Error ($)"
+        # Rescale metrics back to original dollar scale
+        if metric_name == "loss":  # MSE → scale^2
+            train_metric_rescaled = [m * (scale**2) for m in train_metric]
+            val_metric_rescaled = [m * (scale**2) for m in val_metric]
+            y_label = "Mean Squared Error"
+        else:  # MAE → scale
+            train_metric_rescaled = [m * scale for m in train_metric]
+            val_metric_rescaled = [m * scale for m in val_metric]
+            y_label = "Mean Absolute Error"
 
-    # Plot
-    plt.figure(figsize=(10, 6))
-    plt.plot(epochs, train_metric_rescaled, "bo-", label=f"Training {metric.upper()}")
-    plt.plot(epochs, val_metric_rescaled, "ro-", label=f"Validation {metric.upper()}")
-    plt.title(f"Training and Validation {metric.upper()} (Rescaled to USD)")
-    plt.xlabel("Epochs")
-    plt.ylabel(y_label)
-    plt.legend()
-    plt.grid(True)
+        plt.subplot(1, 2 if metric2 else 1, subplot_index)
+        plt.plot(
+            epochs,
+            train_metric_rescaled,
+            "bo-",
+            label=f"Training {metric_name.upper()}",
+        )
+        plt.plot(
+            epochs,
+            val_metric_rescaled,
+            "ro-",
+            label=f"Validation {metric_name.upper()}",
+        )
+        plt.title(f"Training and Validation {metric_name.upper()} (Rescaled)")
+        plt.xlabel("Epochs")
+        plt.ylabel(y_label)
+        plt.legend()
+        plt.grid(True)
+
+    plt.figure(figsize=(15 if metric2 else 8, 6))
+    plot_subplot(1, metric)
+    if metric2:
+        plot_subplot(2, metric2)
     plt.tight_layout()
     plt.show()
+
+
+def analyze_data_distribution(
+    data: np.ndarray, title: str = "Data Distribution Analysis", plot_hist: bool = True
+) -> None:
+    """
+    Analyze and visualize the distribution of data with statistics.
+
+    Args:
+        data (np.ndarray): Input data array to analyze
+        title (str): Title for the plot and analysis
+        plot_hist (bool): Whether to plot the histogram visualization (default: True)
+    """
+    # Calculate statistics
+    stats_dict = {
+        "Mean": np.mean(data),
+        "Median": np.median(data),
+        "Standard Deviation": np.std(data),
+        "Variance": np.var(data),
+        "Minimum": np.min(data),
+        "Maximum": np.max(data),
+        "Range": np.max(data) - np.min(data),
+    }
+
+    # Create table for statistics
+    print(f"\n{title} Statistics:")
+    print("-" * 50)
+    print(f"{'Statistic':<20} {'Value':<15}")
+    print("-" * 35)
+    for key, value in stats_dict.items():
+        print(f"{key:<20} {value:>14,.2f}")
+    print("-" * 35)
+
+    if plot_hist:
+        # Create visualization
+        plt.figure(figsize=(12, 6))
+
+        # Plot histogram
+        plt.hist(
+            data,
+            bins=50,
+            density=True,
+            alpha=0.7,
+            color="skyblue",
+            label="Actual Distribution",
+        )
+
+        # Generate and plot normal distribution curve
+        xmin, xmax = plt.xlim()
+        x = np.linspace(xmin, xmax, 100)
+        p = stats.norm.pdf(x, stats_dict["Mean"], stats_dict["Standard Deviation"])
+        plt.plot(x, p, "k", linewidth=2, label="Normal Distribution")
+
+        plt.title(f"{title} with Normal Curve")
+        plt.xlabel("Value")
+        plt.ylabel("Density")
+        plt.legend()
+        plt.grid(True, alpha=0.3)
+        plt.show()
